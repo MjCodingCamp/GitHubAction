@@ -1,0 +1,6 @@
+framework module Pods_GitHub_Action {
+  umbrella header "Pods-GitHub Action-umbrella.h"
+
+  export *
+  module * { export * }
+}
