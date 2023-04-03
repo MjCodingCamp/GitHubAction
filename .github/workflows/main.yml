@@ -1,0 +1,25 @@
+name: GitHub Action 
+
+on: 
+  push:
+    branches:    
+      - dev
+  pull_request:
+    branches:    
+      - main
+
+jobs:
+  deploy:
+    name: Pipeline Pratice
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Selecting Xcode_Version
+        run: sudo xcode-select -switch /Applications/Xcode_13.1.app
+        
+      - name: Xcode version 
+        run: echo Xcode version is ${{/usr/bin/xcodebuild -version}}
+  
