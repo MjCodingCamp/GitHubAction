@@ -20,6 +20,6 @@ jobs:
       - name: Selecting Xcode_Version
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app
         
-      - name: Xcode version 
-        run: echo Xcode version is ${{/usr/bin/xcodebuild -version}}
+      - name: Running Xcode version 
+        run: /usr/bin/xcodebuild -version
   
