@@ -17,13 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Selecting Xcode_Version
+      - name: Selecting Xcode Version
         run: sudo xcode-select -switch /Applications/Xcode_14.2.app
         
-      - name: Running Xcode version 
+      - name: Running Xcode version Is
         run: /usr/bin/xcodebuild -version
    
       - name: Build Cleanup
         run: |
           xcodebuild clean -project GitHubAction.xcodeproj -scheme GitHubAction | xcpretty
+          
+      - name: Build Test
+        run: |
+          xcodebuild test -project GitHubAction.xcodeproj -scheme GitHubAction -destination 'platform=iOS   Simulator,name=iPhone 13,OS=15.0' | xcpretty -s
+
           
