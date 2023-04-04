@@ -25,5 +25,5 @@ jobs:
    
       - name: Build Cleanup
         run: |
-          xcodebuild clean -project GitHub Action.xcodeproj -scheme GitHub Action | xcpretty
+          xcodebuild clean -project GitHubAction.xcodeproj -scheme GitHubAction | xcpretty
           

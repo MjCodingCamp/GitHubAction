@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_GitHub_ActionVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_GitHub_ActionVersionString[];
+FOUNDATION_EXPORT double Pods_GitHubActionVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_GitHubActionVersionString[];
 
